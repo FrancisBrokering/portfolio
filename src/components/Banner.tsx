@@ -10,9 +10,9 @@ export default function Banner() {
     const [index, setIndex] = useState(1);
     const period = 2000;
     return (
-        <section className='banner' id='home'>
-            <Box ml={'15%'} mr={'15%'}>
-                <Grid h='200px' templateRows={{ base: 'repeat(2, 1fr)', md: 'none' }} templateColumns={{ base: 'none', md: 'repeat(7, 1fr)' }} gap={4} className="aligh-items-center">
+        <Box className='banner' id='home'>
+            <Box ml={'10%'} mr={'10%'}>
+                <Grid templateRows={{ base: 'repeat(2, 1fr)', md: 'none' }} templateColumns={{ base: 'none', md: 'repeat(7, 1fr)' }} gap={4} className="aligh-items-center">
                     <GridItem colSpan={4} >
                         <div className={"animate__animated animate__fadeIn"}>
                             <span className="tagline">Welcome to my Portfolio</span>
@@ -28,6 +28,6 @@ export default function Banner() {
                     </GridItem>
                 </Grid>
             </Box>
-        </section>
+        </Box>
     )
 }

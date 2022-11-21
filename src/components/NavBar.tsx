@@ -29,8 +29,8 @@ export default function NavBar() {
 
   return (
     <>
-      <Box backgroundColor={'transparent'} px={4} className={'navbar'} ml={'15%'} mr={'15%'}>
-        <Flex h={16} alignItems={'center'} className={scrolled ? "scrolled" : ""}>
+      <Flex backgroundColor={'transparent'} className={scrolled ? "scrolled navbar" : "navbar"} pr='10%' pl='10%'>
+        <Flex h={'80px'} >
           <IconButton backgroundColor={'transparent'} size={'md'} icon={isOpen ? <CloseIcon /> : <HamburgerIcon />} aria-label={'Open Menu'} display={{ md: 'none' }} onClick={isOpen ? onClose : onOpen} />
           <HStack spacing={8} alignItems={'center'} justifyContent={{ base: 'flex-end', md: 'space-between' }}>
             <Box className='navbar-my-name' fontWeight={'bold'} >
@@ -65,7 +65,7 @@ export default function NavBar() {
             </Stack>
           </Box>
         ) : null}
-      </Box>
+      </Flex>
     </>
   );
 }
