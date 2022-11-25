@@ -5,6 +5,7 @@ import Navbar from './components/NavBar';
 import Banner from './components/Banner'
 import Skills from './components/Skills'
 import './App.css'
+import { Projects } from './components/Projects';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <Banner />
         <Skills />
+        <Projects />
       </div>
     </ChakraProvider>
   );
