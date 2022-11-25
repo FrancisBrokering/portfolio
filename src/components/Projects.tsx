@@ -13,18 +13,18 @@ export const Projects = () => {
 
     const projects = [
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Carmack",
+            description: "Web App Development",
             imgUrl: projImg1,
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Capterm",
+            description: "CLI/Web App Development",
             imgUrl: projImg2,
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Svadilfari",
+            description: "App Development",
             imgUrl: projImg3,
         },
     ];
@@ -32,7 +32,7 @@ export const Projects = () => {
     return (
         <section className="projects" id="projects">
             <Box ml={'10%'} mr={'10%'}>
-                <Grid>
+                <Grid >
                     <GridItem >
                         <TrackVisibility>
                             {({ isVisible }) =>

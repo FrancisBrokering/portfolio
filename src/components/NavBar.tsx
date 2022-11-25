@@ -46,7 +46,7 @@ export default function NavBar() {
               <a href="#"><img src={navIcon2} alt="" /></a>
               <a href="https://www.instagram.com/fkb_0710/"><img src={navIcon3} alt="" /></a>
             </Flex>
-            <Button backgroundColor={'transparent'} className="navbar-button" display={{ base: 'none', md: 'flex' }}><span>Let’s Connect</span></Button>
+            <Button backgroundColor={'transparent'} className="navbar-button" display={{ base: 'none', md: 'flex' }}><a href='#connect' text-decoration='none'>Contact Me!</a></Button>
           </HStack>
         </Flex>
 
@@ -60,7 +60,7 @@ export default function NavBar() {
                 <a href="https://www.linkedin.com/in/francis-brokering"><img src={navIcon1} alt="" /></a>
                 <a href="#"><img src={navIcon2} alt="" /></a>
                 <a href="https://www.instagram.com/fkb_0710/"><img src={navIcon3} alt="" /></a>
-                <Button backgroundColor={'transparent'} className="navbar-button" ><span>Let’s Connect</span></Button>
+                <Button backgroundColor={'transparent'} className="navbar-button" ><a href='#connect' text-decoration='none'>Contact Me!</a></Button>
               </Flex>
             </Stack>
           </Box>
