@@ -78,7 +78,7 @@ export const Projects = () => {
                                             {
                                                 projectTab === 'third' &&
                                                 <Box>
-                                                    <p>NASA</p>
+                                                    <p>● Modified a 3D printer by flashing the firmware, creating an enclosure, and installing heat lamps and a liquid cooling system, in order to print Ultem (polyetherimide). The Solar Sail required parts created with Ultem.</p>
                                                 </Box>
                                             }
                                         </Box>
