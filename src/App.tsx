@@ -1,13 +1,13 @@
 import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react'
-import Navbar from './components/NavBar';
-import Banner from './components/Banner'
-import Skills from './components/Skills'
+import Navbar from './pages/NavBar';
+import Banner from './pages/Banner'
+import Skills from './pages/Skills'
 import './App.css'
-import { Projects } from './components/Projects';
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
-import { WorkExperience } from './components/WorkExperience';
+import { Projects } from './pages/Projects';
+import { Contact } from './pages/Contact';
+import { Footer } from './pages/Footer';
+import { WorkExperience } from './pages/WorkExperience';
 
 function App() {
   return (
