@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Grid, GridItem } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import navLinkedIn from '../assets/img/navLinkedIn.svg';
 import navInsta from '../assets/img/navInsta.svg';
 import navGithub from '../assets/img/navGithub.svg';

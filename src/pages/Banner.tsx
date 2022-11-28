@@ -1,14 +1,8 @@
-import { ArrowForwardIcon } from "@chakra-ui/icons"
-import { Box, Button, Container, Grid, GridItem } from "@chakra-ui/react"
-import { useEffect, useState } from "react";
+import { Box, Grid, GridItem } from "@chakra-ui/react"
+import {  useState } from "react";
 import meIcon from "../assets/img/meIcon.svg"
 
 export default function Banner() {
-    const [loopNum, setLoopNum] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
-    const [delta, setDelta] = useState(300 - Math.random() * 100);
-    const [index, setIndex] = useState(1);
-    const period = 2000;
     return (
         <Box className='banner' id='home'>
             <Box ml={'10%'} mr={'10%'}>
@@ -23,7 +17,7 @@ export default function Banner() {
                         </div>
                     </GridItem>
                     <GridItem colSpan={4}>
-                        <img src={meIcon} alt='Header Img' />
+                        <img src={meIcon} alt='Header Img'/>
                     </GridItem>
                 </Grid>
             </Box>

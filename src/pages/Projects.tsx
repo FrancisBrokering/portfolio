@@ -1,4 +1,3 @@
-// import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "../components/ProjectCard";
 import carmackLanguageSelection from "../assets/img/carmackLanguageSelection.png";
 import printer from "../assets/img/3Dprinter.png";

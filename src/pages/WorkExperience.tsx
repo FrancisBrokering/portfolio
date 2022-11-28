@@ -1,7 +1,4 @@
-// import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { ProjectCard } from "../components/ProjectCard";
 import nasaJet from "../assets/img/nasaJet.png";
-import nasaPrinter from "../assets/img/3Dprinter.png";
 import nasaGlobe from "../assets/img/nasaGlobe.png";
 import rakutenSign from "../assets/img/rakutenSign.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";

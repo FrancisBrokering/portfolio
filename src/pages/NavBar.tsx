@@ -1,5 +1,5 @@
-import { ReactNode, useState, useEffect } from 'react';
-import { Box, Flex, HStack, Link, IconButton, Button, Menu, MenuButton, MenuList, MenuItem, MenuDivider, useDisclosure, useColorModeValue, Stack, } from '@chakra-ui/react';
+import { useState, useEffect } from 'react';
+import { Box, Flex, Link, IconButton, Button, useDisclosure, Stack, } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import navLinkedIn from '../assets/img/navLinkedIn.svg';
 import navInsta from '../assets/img/navInsta.svg';
