@@ -26,7 +26,7 @@ export default function Skills() {
 
     return (
         <Box className="skill" id="skills" >
-            <Box className="container" ml={'10%'} mr={'10%'}>
+            <Box className="container" ml={{base: '25px', md:'10%'}} mr={{base: '25px', md:'10%'}}>
                 <div className="row">
                     <div className="col-12">
                         <div className="skill-bx wow zoomIn">

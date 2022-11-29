@@ -8,6 +8,7 @@ import { Projects } from './pages/Projects';
 import { Contact } from './pages/Contact';
 import { Footer } from './pages/Footer';
 import { WorkExperience } from './pages/WorkExperience';
+import { MobileWorkExperience } from './pages/MobileWorkExperence';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Banner />
         <Skills />
         <WorkExperience />
+        <MobileWorkExperience />
         <Projects />
         <Contact />
         <Footer />

@@ -19,7 +19,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
           </div>
         </div>
       </GridItem>
-      <GridItem colSpan={2}>
+      <GridItem colSpan={2} mb={{base:'50px', md: '0px'}}>
         <h1>{props.title}</h1>
         <Box>
           {props.description}

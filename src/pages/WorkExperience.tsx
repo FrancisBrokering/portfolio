@@ -35,109 +35,111 @@ export const WorkExperience = () => {
     ];
 
     return (
-        <section className="projects" id="experience">
-            <Box ml={'10%'} mr={'10%'}>
-                <Grid >
-                    <GridItem >
-                        <TrackVisibility>
-                            {({ isVisible }) =>
-                                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                                    <h2>Work Experience</h2>
-                                    <Box id="projects-tabs">
-                                        <Box mt='50px' id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                                            <Box mb='30px'>
-                                                <Grid templateRows='repeat(1, 1fr)' templateColumns='repeat(3, 1fr)' gap='20px'>
-                                                    {
-                                                        experience.map((ex, index) => {
-                                                            return (
-                                                                <Box onMouseEnter={() => setExperienceTab(ex.logo)} >
-                                                                    <ExperienceCard
-                                                                        key={index}
-                                                                        {...ex}
-                                                                    />
-                                                                </Box>
-                                                            )
-                                                        })
-                                                    }
-                                                </Grid>
-                                            </Box>
-                                            {
-                                                experienceTab === 'nasaLangley' &&
-                                                <Grid templateRows='repeat(1, 1fr)' templateColumns='repeat(3, 1fr)' gap='20px'>
-                                                    <GridItem colSpan={1} rowSpan={1}>
-                                                        <Image
-                                                            objectFit='cover'
-                                                            src={nasaGlobe}
-                                                            alt='nasa Jet'
-                                                        />
-                                                    </GridItem>
-                                                    <GridItem colSpan={2}>
-                                                        <h1>
-                                                            {"Rapid Prototyping Intern"}
-                                                        </h1>
-                                                        <Box textAlign='left'>
-                                                            ● Modeled 3D components of the ACS3 Solar Sail using CAD software. Created prototypes of the parts using various 3D printers, which were then used for testing the design and practicing assembling the solar sail.
-                                                        </Box>
-                                                    </GridItem>
-                                                </Grid>
-                                            }
-                                            {
-                                                experienceTab === 'nasaAmes' &&
-                                                <Grid templateRows='repeat(1, 1fr)' templateColumns='repeat(4, 1fr)' gap='20px'>
-                                                    <GridItem colSpan={2}>
-                                                        <Image
-                                                            objectFit='cover'
-                                                            src={nasaJet}
-                                                            alt='nasa Jet'
-                                                        />
-                                                    </GridItem>
-                                                    <GridItem colSpan={2}>
-                                                        <h1>
-                                                            {"Database Engineer Intern"}
-                                                        </h1>
-                                                        <Box textAlign='left'>
-                                                            ● Created a database with US-made drone parts to connect OEMs and suppliers. The data included the origin of every component making up the drone part. This data was used by a NASA team designing a search-and-rescue drone for the U.S. Coast Guard.
-                                                        </Box>
-                                                    </GridItem>
-                                                </Grid>
+        <Box display={{base: 'none', md:'flex'}}>
+            <section className="projects" id="experience">
+                <Box ml={'10%'} mr={'10%'}>
+                    <Grid >
+                        <GridItem >
+                            <TrackVisibility>
+                                {({ isVisible }) =>
+                                    <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                                        <h2>Work Experience</h2>
+                                        <Box id="projects-tabs">
+                                            <Box mt='50px' id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                                                <Box mb='30px'>
+                                                    <Grid templateRows='repeat(1, 1fr)' templateColumns='repeat(3, 1fr)' gap='20px'>
+                                                        {
+                                                            experience.map((ex, index) => {
+                                                                return (
+                                                                    <Box onMouseEnter={() => setExperienceTab(ex.logo)} >
+                                                                        <ExperienceCard
+                                                                            key={index}
+                                                                            {...ex}
+                                                                        />
+                                                                    </Box>
+                                                                )
+                                                            })
+                                                        }
+                                                    </Grid>
+                                                </Box>
+                                                {
+                                                    experienceTab === 'nasaLangley' &&
+                                                    <Grid templateRows='repeat(1, 1fr)' templateColumns='repeat(3, 1fr)' gap='20px'>
+                                                        <GridItem colSpan={1} rowSpan={1}>
+                                                            <Image
+                                                                objectFit='cover'
+                                                                src={nasaGlobe}
+                                                                alt='nasa Jet'
+                                                            />
+                                                        </GridItem>
+                                                        <GridItem colSpan={2}>
+                                                            <h1>
+                                                                {"Rapid Prototyping Intern"}
+                                                            </h1>
+                                                            <Box textAlign='left'>
+                                                                ● Modeled 3D components of the ACS3 Solar Sail using CAD software. Created prototypes of the parts using various 3D printers, which were then used for testing the design and practicing assembling the solar sail.
+                                                            </Box>
+                                                        </GridItem>
+                                                    </Grid>
+                                                }
+                                                {
+                                                    experienceTab === 'nasaAmes' &&
+                                                    <Grid templateRows='repeat(1, 1fr)' templateColumns='repeat(4, 1fr)' gap='20px'>
+                                                        <GridItem colSpan={2}>
+                                                            <Image
+                                                                objectFit='cover'
+                                                                src={nasaJet}
+                                                                alt='nasa Jet'
+                                                            />
+                                                        </GridItem>
+                                                        <GridItem colSpan={2}>
+                                                            <h1>
+                                                                {"Database Engineer Intern"}
+                                                            </h1>
+                                                            <Box textAlign='left'>
+                                                                ● Created a database with US-made drone parts to connect OEMs and suppliers. The data included the origin of every component making up the drone part. This data was used by a NASA team designing a search-and-rescue drone for the U.S. Coast Guard.
+                                                            </Box>
+                                                        </GridItem>
+                                                    </Grid>
 
-                                            }
-                                            {
-                                                experienceTab === 'rakuten' &&
-                                                <Grid templateRows='repeat(2, 1fr)' templateColumns='repeat(3, 1fr)' gap='20px'>
-                                                    <GridItem colSpan={1} rowSpan={2}>
-                                                        <Image
-                                                            objectFit='cover'
-                                                            src={rakutenSign}
-                                                            alt='nasa Jet'
-                                                        />
-                                                    </GridItem>
-                                                    <GridItem colSpan={2} rowSpan={1}>
-                                                        <h1>
-                                                            {"Frontend Engineer Intern"}
-                                                        </h1>
-                                                        <Box textAlign='left'>
-                                                            ● Pioneered the development of new software that will streamline the status monitoring of drones. These drones are
-                                                            expected to be used for Rakuten’s delivery services. In the final stages of this project, this software will allow one pilot
-                                                            to monitor up to 50 drones at a time. (React.js, Typescript, Material-UI)
-                                                        </Box>
-                                                    </GridItem>
-                                                    <GridItem colSpan={2} rowSpan={1}>
-                                                        <Box textAlign='left'>
-                                                            ● Completed 18 tickets for an e-commerce Progressive Web App used for Rakuten Drone Delivery. The tickets included
-                                                            fixing arising issues, implementing new features, and making design changes. (React.js, Typescript)
-                                                        </Box>
-                                                    </GridItem>
-                                                </Grid>
-                                            }
+                                                }
+                                                {
+                                                    experienceTab === 'rakuten' &&
+                                                    <Grid templateRows='repeat(2, 1fr)' templateColumns='repeat(3, 1fr)' gap='20px'>
+                                                        <GridItem colSpan={1} rowSpan={2}>
+                                                            <Image
+                                                                objectFit='cover'
+                                                                src={rakutenSign}
+                                                                alt='nasa Jet'
+                                                            />
+                                                        </GridItem>
+                                                        <GridItem colSpan={2} rowSpan={1}>
+                                                            <h1>
+                                                                {"Frontend Engineer Intern"}
+                                                            </h1>
+                                                            <Box textAlign='left'>
+                                                                ● Pioneered the development of new software that will streamline the status monitoring of drones. These drones are
+                                                                expected to be used for Rakuten’s delivery services. In the final stages of this project, this software will allow one pilot
+                                                                to monitor up to 50 drones at a time. (React.js, Typescript, Material-UI)
+                                                            </Box>
+                                                        </GridItem>
+                                                        <GridItem colSpan={2} rowSpan={1}>
+                                                            <Box textAlign='left'>
+                                                                ● Completed 18 tickets for an e-commerce Progressive Web App used for Rakuten Drone Delivery. The tickets included
+                                                                fixing arising issues, implementing new features, and making design changes. (React.js, Typescript)
+                                                            </Box>
+                                                        </GridItem>
+                                                    </Grid>
+                                                }
+                                            </Box>
                                         </Box>
-                                    </Box>
-                                </div>}
-                        </TrackVisibility>
-                    </GridItem>
-                </Grid>
-            </Box>
-            <img className="background-image-right" src={colorSharp2}></img>
-        </section>
+                                    </div>}
+                            </TrackVisibility>
+                        </GridItem>
+                    </Grid>
+                </Box>
+                <img className="background-image-right" src={colorSharp2}></img>
+            </section>
+        </Box>
     )
 }

@@ -48,7 +48,7 @@ export const Projects = () => {
 
     return (
         <section className="projects" id="projects">
-            <Box ml={'10%'} mr={'10%'}>
+            <Box ml={{base: '25px', md:'10%'}} mr={{base: '25px', md:'10%'}}>
                 <Grid >
                     <GridItem >
                         <TrackVisibility>
@@ -71,7 +71,7 @@ export const Projects = () => {
                                             {
                                                 projectTab === 'first' &&
                                                 <Box>
-                                                    <Grid templateRows='repeat(2, 1fr)' templateColumns='repeat(3, 1fr)' gap='20px'>
+                                                    <Grid templateRows={{base:'repeat(1, 1fr)', md:'repeat(2, 1fr)'}} templateColumns={{base:'repeat(1, 1fr)', md:'repeat(3, 1fr)'}} gap={{base:'0px', md: '20px'}}>
                                                         {
                                                             softwareProjects.map((project, index) => {
                                                                 return (
@@ -88,7 +88,7 @@ export const Projects = () => {
                                             {
                                                 projectTab === 'second' &&
                                                 <Box>
-                                                    <Grid templateRows='repeat(2, 1fr)' templateColumns='repeat(3, 1fr)' gap='20px'>
+                                                    <Grid templateRows={{base:'repeat(1, 1fr)', md:'repeat(2, 1fr)'}} templateColumns={{base:'repeat(1, 1fr)', md:'repeat(3, 1fr)'}} gap={{base:'0px', md: '20px'}}>
                                                         {
                                                             hardwareProjects.map((project, index) => {
                                                                 return (

@@ -29,30 +29,30 @@ export default function NavBar() {
 
   return (
     <>
-      <Flex backgroundColor={'transparent'} className={scrolled ? "scrolled navbar" : "navbar"} pr='10%' pl='10%'>
-        <Flex h={'80px'} alignItems={'center'} >
+      <Flex direction='column' backgroundColor={'transparent'} className={scrolled ? "scrolled navbar" : "navbar"} display={{base: scrolled ?'none':'flex',md:'flex'}} pr={{base: '20px', md:'10%'}} pl={{base: '20px', md:'10%'}}>
+        <Flex h={'80px'} alignItems={'center'} justifyContent='space-between'>
           <IconButton backgroundColor={'transparent'} size={'md'} icon={isOpen ? <CloseIcon /> : <HamburgerIcon />} aria-label={'Open Menu'} display={{ md: 'none' }} onClick={isOpen ? onClose : onOpen} />
-          <Flex direction='row' alignItems={'center'} justifyContent='space-between'>
+          <Flex direction='row' alignItems={'center'} >
             <Box className='navbar-my-name' fontWeight={'bold'} >
               <Link _hover={{ textDecoration: 'none' }} href="/">Francis Brokering</Link>
             </Box>
-            <Flex as={'nav'} direction='row' display={{ sm: 'none', md: 'flex' }}>
+            <Flex display={{ base: 'none', md: 'flex' }}>
               <Link href='#home' className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')} _hover={{ textDecoration: 'none', opacity: 1, }}>Home</Link>
               <Link href='#skills' className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')} _hover={{ textDecoration: 'none', opacity: 1, }}>Skills</Link>
               <Link href='#experience' className={activeLink === 'experience' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('experience')} _hover={{ textDecoration: 'none', opacity: 1, }}>Experience</Link>
               <Link href='#projects' className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')} _hover={{ textDecoration: 'none', opacity: 1, }}>Projects</Link>
             </Flex>
-            <Flex className="social-icon" display={{ sm: 'none', md: 'flex' }}>
+            <Flex className="social-icon" display={{ base: 'none', md: 'flex' }}>
               <Link href="https://www.linkedin.com/in/francis-brokering"><img src={navLinkedIn} alt="linkedin" /></Link>
               <Link href="https://www.instagram.com/fkb_0710/"><img src={navInsta} alt="insta" /></Link>
               <Link href="https://github.com/FrancisBrokering/portfolio"><img src={navGithub} alt="github" /></Link>
             </Flex>
-            <Button backgroundColor={'transparent'} className="navbar-button" display={{ sm: 'none', md: 'flex' }}><Link href='#connect' _hover={{ textDecoration: 'none' }} >Contact Me!</Link></Button>
+            <Button display={{ base: 'none', md: 'flex' }} backgroundColor={'transparent'} className="navbar-button" ><Link href='#connect' _hover={{ textDecoration: 'none' }} >Contact Me!</Link></Button>
           </Flex>
         </Flex>
 
         {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
+          <Box pb={4} display={{ md: 'none' }} backgroundColor='black' rounded='30px' pt='15px'>
             <Stack as={'nav'} spacing={4}>
               <Link href='#home' className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')} _hover={{ textDecoration: 'none', opacity: 1, }}>Home</Link>
               <Link href='#skills' className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')} _hover={{ textDecoration: 'none', opacity: 1, }}>Skills</Link>
@@ -62,7 +62,7 @@ export default function NavBar() {
                 <a href="https://www.linkedin.com/in/francis-brokering"><img src={navLinkedIn} alt="linkedin" /></a>
                 <a href="https://www.instagram.com/fkb_0710/"><img src={navInsta} alt="insta" /></a>
                 <a href="https://github.com/FrancisBrokering/portfolio"><img src={navGithub} alt="github" /></a>
-                <Button backgroundColor={'transparent'} className="navbar-button" ><a href='#connect' text-decoration='none'>Contact Me!</a></Button>
+                <Button backgroundColor={'transparent'} className="navbar-button" ><a href='#connect' text-decoration='none'>Contact</a></Button>
               </Flex>
             </Stack>
           </Box>
