@@ -5,7 +5,7 @@ import comingSoon from "../assets/img/comingSoon2.png";
 import frogJump from "../assets/img/basys3.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import TrackVisibility from 'react-on-screen';
-import { Box, Button, Center, Text, Container, Flex, Grid, GridItem, Link, List, ListIcon, ListItem, Tag, TagLabel, TagLeftIcon } from "@chakra-ui/react"
+import { Box, Center, Flex, Grid, GridItem, Link } from "@chakra-ui/react"
 import { useState } from "react";
 import { ProjectOther } from "../components/ProjectsOther";
 
@@ -16,9 +16,10 @@ export const Projects = () => {
         {
             title: "Carmack",
             role: "Web App Development",
-            description: "Developed a web application with speech recognition to allow users to generate code with voice commands. The code is generated using the Codex API developed by OpenAI which has been released as private beta. The user can manuever through the website, select a programming language, generate code, and copy to clipboard without any mouse/keyboard interactions.",
+            description: "Developed a web application with speech recognition to allow users to generate code with voice commands. The code is generated using the Codex API developed by OpenAI which has been released as private beta. The user can manuever through the website, select a programming language, generate code, edit the code, translate the code into a different language, copy the generated code to the clipboard, and download the code without any mouse/keyboard interactions.",
             imgUrl: carmackLanguageSelection,
             date: "Oct 2022 - Dec 2022",
+            video: <iframe className="nav-video" width="560" height="315" src="https://www.youtube.com/embed/OcfLd3WHz_g" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         },
         {
             title: "Capterm",
@@ -26,6 +27,7 @@ export const Projects = () => {
             description: "Developed a CLI app that will take an output from the terminal and return a shareable URL to a web page with the output. Users can use their GitHub account to log in and see previous outputs generated in the past. The output error/code will be indented and color coded making it easier to read.",
             imgUrl: comingSoon,
             date: "Apr 2022 - Dec 2022",
+            video: null
         },
     ];
 
@@ -36,13 +38,15 @@ export const Projects = () => {
             description: "Created a Jumping Frog game using the Basys3 board and a VGA monitor. The top-level design, included a counter, a selector, a  hex converter, a ring counter, a LFSR, a clock, a VGA displayer, a frog statemachine, movement module for the plants and frog, a edge detector, and the game state machine, all implemented using Verilog.",
             imgUrl: frogJump,
             date: "May 2022 - June 2022",
+            video: <iframe className="nav-video" width="560" height="315" src="https://www.youtube.com/embed/BLGiG5rQo5A" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         },
         {
-            title: "Ulterm Printer",
+            title: "Ultem (PEI) Printer",
             role: "3D printer modification",
             description: "Modified the LulzBot TAZ 6 3D printer in order to print Ultem (polyetherimide). Many modifications were needed such as flashing the firmware to print at high temperatures beyond the printer's limit, creating an enclosure and installing heat lamps to prevent the plastic from warping due to the cold air, and installing a liquid cooling system to prevent the motors from overheating.",
             imgUrl: printer,
             date: "Jun 2019 - Sep 2019",
+            video: null
         },
     ];
 
@@ -71,7 +75,7 @@ export const Projects = () => {
                                             {
                                                 projectTab === 'first' &&
                                                 <Box>
-                                                    <Grid templateRows={{base:'repeat(1, 1fr)', md:'repeat(2, 1fr)'}} templateColumns={{base:'repeat(1, 1fr)', md:'repeat(3, 1fr)'}} gap={{base:'0px', md: '20px'}}>
+                                                    <Grid templateRows={{base:'repeat(1, 1fr)', md:'repeat(2, 1fr)'}} templateColumns={{base:'repeat(1, 1fr)', md:'repeat(5, 1fr)'}} gap={{base:'0px', md: '20px'}}>
                                                         {
                                                             softwareProjects.map((project, index) => {
                                                                 return (
@@ -88,7 +92,7 @@ export const Projects = () => {
                                             {
                                                 projectTab === 'second' &&
                                                 <Box>
-                                                    <Grid templateRows={{base:'repeat(1, 1fr)', md:'repeat(2, 1fr)'}} templateColumns={{base:'repeat(1, 1fr)', md:'repeat(3, 1fr)'}} gap={{base:'0px', md: '20px'}}>
+                                                    <Grid templateRows={{base:'repeat(1, 1fr)', md:'repeat(2, 1fr)'}} templateColumns={{base:'repeat(1, 1fr)', md:'repeat(5, 1fr)'}} gap={{base:'0px', md: '20px'}}>
                                                         {
                                                             hardwareProjects.map((project, index) => {
                                                                 return (
