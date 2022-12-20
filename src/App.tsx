@@ -7,8 +7,8 @@ import './App.css'
 import { Projects } from './pages/Projects';
 import { Contact } from './pages/Contact';
 import { Footer } from './pages/Footer';
-import { WorkExperience } from './pages/WorkExperience';
-import { MobileWorkExperience } from './pages/MobileWorkExperence';
+import { WorkExperience } from './pages/Experiences';
+import { MobileWorkExperience } from './pages/MobileExperences';
 
 function App() {
   return (

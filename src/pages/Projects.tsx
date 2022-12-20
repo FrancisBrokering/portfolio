@@ -52,7 +52,7 @@ export const Projects = () => {
 
     return (
         <section className="projects" id="projects">
-            <Box ml={{base: '25px', md:'10%'}} mr={{base: '25px', md:'10%'}}>
+            <Box ml={{ base: '25px', md: '10%' }} mr={{ base: '25px', md: '10%' }}>
                 <Grid >
                     <GridItem >
                         <TrackVisibility>
@@ -74,41 +74,18 @@ export const Projects = () => {
                                         <Box mt='50px' id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                                             {
                                                 projectTab === 'first' &&
-                                                <Box>
-                                                    <Grid templateRows={{base:'repeat(1, 1fr)', md:'repeat(2, 1fr)'}} templateColumns={{base:'repeat(1, 1fr)', md:'repeat(5, 1fr)'}} gap={{base:'0px', md: '20px'}}>
-                                                        {
-                                                            softwareProjects.map((project, index) => {
-                                                                return (
-                                                                    <ProjectCard
-                                                                        key={index}
-                                                                        {...project}
-                                                                    />
-                                                                )
-                                                            })
-                                                        }
-                                                    </Grid>
-                                                </Box>
+                                                <Grid templateRows={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }} templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(5, 1fr)' }} gap={{ base: '0px', md: '20px' }}>
+                                                    {softwareProjects.map((project, index) => { return (<ProjectCard key={index} {...project} />) })}
+                                                </Grid>
                                             }
                                             {
                                                 projectTab === 'second' &&
-                                                <Box>
-                                                    <Grid templateRows={{base:'repeat(1, 1fr)', md:'repeat(2, 1fr)'}} templateColumns={{base:'repeat(1, 1fr)', md:'repeat(5, 1fr)'}} gap={{base:'0px', md: '20px'}}>
-                                                        {
-                                                            hardwareProjects.map((project, index) => {
-                                                                return (
-                                                                    <ProjectCard
-                                                                        key={index}
-                                                                        {...project}
-                                                                    />
-                                                                )
-                                                            })
-                                                        }
-                                                    </Grid>
-                                                </Box>
+                                                <Grid templateRows={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }} templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(5, 1fr)' }} gap={{ base: '0px', md: '20px' }}>
+                                                    {hardwareProjects.map((project, index) => { return (<ProjectCard key={index} {...project} />) })}
+                                                </Grid>
                                             }
                                             {
-                                                projectTab === 'third' &&
-                                                <ProjectOther />
+                                                projectTab === 'third' && <ProjectOther />
                                             }
                                         </Box>
                                     </Box>

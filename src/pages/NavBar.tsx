@@ -25,10 +25,9 @@ export default function NavBar() {
 
   return (
     <>
-      <Flex direction='column' backgroundColor={'transparent'} className={scrolled ? "scrolled navbar" : "navbar"} display={{ base: scrolled ? 'none' : 'flex', md: 'flex' }} pr={{ base: '20px', md: '10%' }} pl={{ base: '20px', md: '10%' }}>
-        <Flex h={'80px'} alignItems={'center'} as={'nav'}>
-          <IconButton backgroundColor={'transparent'} size={'md'} icon={isOpen ? <CloseIcon /> : <HamburgerIcon />} aria-label={'Open Menu'} display={{ md: 'none' }} onClick={isOpen ? onClose : onOpen} />
-          <Flex alignItems={'center'} w='100%'>
+      <Flex direction='column' backgroundColor={'transparent'} className={scrolled ? "scrolled navbar" : "navbar"} display='flex' pr={{ base: '20px', md: '10%' }} pl={{ base: '20px', md: '10%' }}>
+        <Flex h={'80px'} alignItems={'center'} as={'nav'} >
+          <Flex alignItems={'center'} w='100%' >
             <Box className='navbar-my-name' fontWeight={'bold'} >
               <Link _hover={{ textDecoration: 'none' }} href="/">Francis Brokering</Link>
             </Box>
@@ -44,27 +43,27 @@ export default function NavBar() {
               <Link href="https://www.instagram.com/fkb_0710/"><img src={navInsta} alt="insta" /></Link>
               <Link href="https://github.com/FrancisBrokering/portfolio"><img src={navGithub} alt="github" /></Link>
             </Box>
-            <Button display={{ base: 'none', md: 'flex' }} backgroundColor={'transparent'} className="navbar-button" >
+            <Button minWidth='140px' display={{ base: 'none', md: 'flex' }} backgroundColor={'transparent'} className="navbar-button" >
               <Link href='#connect' _hover={{ textDecoration: 'none' }} >Contact Me!</Link>
             </Button>
+            <IconButton _hover={{ bg: "rgba(67, 27, 92, 0.3)" }} borderColor='#431b5c' bg={'transparent'} variant='outline' size={'lg'}
+              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />} aria-label={'Open Menu'} display={{ md: 'none' }} onClick={isOpen ? onClose : onOpen} />
           </Flex>
         </Flex>
 
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }} backgroundColor='black' rounded='30px' pt='15px'>
-            <Stack as={'nav'} spacing={4} alignItems='left'>
+            <Stack as={'nav'} spacing={4} alignItems='center'>
               <Link href='#home' className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')} _hover={{ textDecoration: 'none', opacity: 1, }}>Home</Link>
               <Link href='#skills' className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')} _hover={{ textDecoration: 'none', opacity: 1, }}>Skills</Link>
               <Link href='#experience' className={activeLink === 'experience' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('experience')} _hover={{ textDecoration: 'none', opacity: 1, }}>Experience</Link>
               <Link href='#projects' className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')} _hover={{ textDecoration: 'none', opacity: 1, }}>Projects</Link>
-              <Flex className="social-icon" pl='25px'>
+              <Link href='#contact' className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contact')} _hover={{ textDecoration: 'none', opacity: 1, }}>Contact</Link>
+              <Flex className="social-icon" >
                 <a href="https://www.linkedin.com/in/francis-brokering"><img src={navLinkedIn} alt="linkedin" /></a>
                 <a href="https://www.instagram.com/fkb_0710/"><img src={navInsta} alt="insta" /></a>
                 <a href="https://github.com/FrancisBrokering/portfolio"><img src={navGithub} alt="github" /></a>
               </Flex>
-              <Box >
-                <Button width='50%' backgroundColor={'transparent'} className="navbar-button" ><a href='#connect' text-decoration='none'>Contact</a></Button>
-              </Box>
             </Stack>
           </Box>
         ) : null}

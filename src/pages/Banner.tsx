@@ -1,6 +1,5 @@
 import { Box, Grid, GridItem } from "@chakra-ui/react"
-import {  useState } from "react";
-import meIcon from "../assets/img/meIcon.svg"
+import meIcon from "../assets/img/meIcon.png"
 
 export default function Banner() {
     return (
