@@ -32,7 +32,7 @@ export const MobileWorkExperience = () => {
 
     return (
         <Box display={{ base: 'flex', md: 'none' }}>
-            <section className="experience" id="experience">
+            <section className="experience" id="experience-m">
                 <Center mr='25px' ml='25px'>
                     <Grid >
                         <GridItem >

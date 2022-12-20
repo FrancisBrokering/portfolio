@@ -44,7 +44,7 @@ export default function NavBar() {
               <Link href="https://github.com/FrancisBrokering/portfolio"><img src={navGithub} alt="github" /></Link>
             </Box>
             <Button minWidth='140px' display={{ base: 'none', md: 'flex' }} backgroundColor={'transparent'} className="navbar-button" >
-              <Link href='#connect' _hover={{ textDecoration: 'none' }} >Contact Me!</Link>
+              <Link href='#contact' _hover={{ textDecoration: 'none' }} >Contact Me!</Link>
             </Button>
             <IconButton _hover={{ bg: "rgba(67, 27, 92, 0.3)" }} borderColor='#431b5c' bg={'transparent'} variant='outline' size={'lg'}
               icon={isOpen ? <CloseIcon /> : <HamburgerIcon />} aria-label={'Open Menu'} display={{ md: 'none' }} onClick={isOpen ? onClose : onOpen} />
@@ -56,7 +56,7 @@ export default function NavBar() {
             <Stack as={'nav'} spacing={4} alignItems='center'>
               <Link href='#home' className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')} _hover={{ textDecoration: 'none', opacity: 1, }}>Home</Link>
               <Link href='#skills' className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')} _hover={{ textDecoration: 'none', opacity: 1, }}>Skills</Link>
-              <Link href='#experience' className={activeLink === 'experience' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('experience')} _hover={{ textDecoration: 'none', opacity: 1, }}>Experience</Link>
+              <Link href='#experience-m' className={activeLink === 'experience' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('experience')} _hover={{ textDecoration: 'none', opacity: 1, }}>Experience</Link>
               <Link href='#projects' className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')} _hover={{ textDecoration: 'none', opacity: 1, }}>Projects</Link>
               <Link href='#contact' className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contact')} _hover={{ textDecoration: 'none', opacity: 1, }}>Contact</Link>
               <Flex className="social-icon" >

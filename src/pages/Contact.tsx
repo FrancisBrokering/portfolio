@@ -50,7 +50,7 @@ export const Contact = () => {
     };
 
     return (
-        <section className="contact" id="connect">
+        <section className="contact" id="contact">
             <Box ml={'10%'} mr={'10%'}>
                 
                 <Grid templateRows='repeat(1, 1fr)' templateColumns={{sm:'repeat(1, 1fr)',  md: 'repeat(8, 1fr)'}} gap='10px' alignItems="center">
