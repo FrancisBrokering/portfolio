@@ -1,7 +1,7 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import getProgrammingLanguageSvg from '../data/ProgrammingLanguage'
-import colorSharp from "../assets/img/color-sharp.png"
+// import colorSharp from "../assets/img/color-sharp.png"
 import { Box, Center, Flex } from "@chakra-ui/react";
 
 export default function Skills() {
@@ -104,7 +104,7 @@ export default function Skills() {
                     </div>
                 </div>
             </Box>
-            <img className="background-image-left" src={colorSharp} alt="Image" />
+            {/* <img className="background-image-left" src={colorSharp} alt="Image" /> */}
         </Box>
     )
 }

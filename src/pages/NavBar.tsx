@@ -4,9 +4,10 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import navLinkedIn from '../assets/img/navLinkedIn.svg';
 import navInsta from '../assets/img/navInsta.svg';
 import navGithub from '../assets/img/navGithub.svg';
+import { useSearchParams } from 'react-router-dom';
 
 export default function NavBar() {
-  const [activeLink, setActiveLink] = useState('home')
+  const [activeLink, setActiveLink] = useState('Home')
   const [scrolled, setScrolled] = useState(false)
   const { isOpen, onOpen, onClose } = useDisclosure()
   const onUpdateActiveLink = (value: string) => { setActiveLink(value) }
@@ -21,7 +22,46 @@ export default function NavBar() {
     }
     window.addEventListener("scroll", onScroll)
     return () => window.removeEventListener("scroll", onScroll)
+
   }, [])
+
+  const navbarPaths = [
+    {
+      link: "/#home",
+      label: "Home",
+    },
+    {
+      link: "/#skills",
+      label: "Skills",
+    },
+    {
+      link: "/#experience",
+      label: "Experience",
+    },
+    {
+      link: "/#projects",
+      label: "Projects",
+    },
+  ];
+  const mobileNavbarPaths = [
+    {
+      link: "/#home",
+      label: "Home",
+    },
+    {
+      link: "/#skills",
+      label: "Skills",
+    },
+    {
+      link: "/#experience-m",
+      label: "Experience",
+    },
+    {
+      link: "/#projects",
+      label: "Projects",
+    },
+  ];
+
 
   return (
     <>
@@ -33,20 +73,17 @@ export default function NavBar() {
             </Box>
             <Spacer />
             <Box display={{ base: 'none', md: 'flex' }}>
-              <Link href='#home' className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')} _hover={{ textDecoration: 'none', opacity: 1, }}>Home</Link>
-              <Link href='#skills' className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')} _hover={{ textDecoration: 'none', opacity: 1, }}>Skills</Link>
-              <Link href='#experience' className={activeLink === 'experience' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('experience')} _hover={{ textDecoration: 'none', opacity: 1, }}>Experience</Link>
-              <Link href='#projects' className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')} _hover={{ textDecoration: 'none', opacity: 1, }}>Projects</Link>
+              {window.location.href.includes('carmack') ? <></> : navbarPaths.map((path) => { return (<Link href={path.link} className={activeLink === path.label ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink(path.label)} _hover={{ textDecoration: 'none', opacity: 1, }}>{path.label}</Link>) })}
             </Box>
             <Box className="social-icon" display={{ base: 'none', md: 'flex' }}>
               <Link href="https://www.linkedin.com/in/francis-brokering"><img src={navLinkedIn} alt="linkedin" /></Link>
               <Link href="https://www.instagram.com/fkb_0710/"><img src={navInsta} alt="insta" /></Link>
               <Link href="https://github.com/FrancisBrokering/portfolio"><img src={navGithub} alt="github" /></Link>
             </Box>
-            <Button minWidth='140px' display={{ base: 'none', md: 'flex' }} backgroundColor={'transparent'} className="navbar-button" >
-              <Link href='#contact' _hover={{ textDecoration: 'none' }} >Contact Me!</Link>
-            </Button>
-            <IconButton _hover={{ bg: "rgba(67, 27, 92, 0.3)" }} borderColor='#431b5c' bg={'transparent'} variant='outline' size={'lg'}
+            {window.location.href.includes('carmack') ? <></> : <Button minWidth='140px' display={{ base: 'none', md: 'flex' }} backgroundColor={'transparent'} className="navbar-button" >
+              <Link href='/#contact' _hover={{ textDecoration: 'none' }} >Contact Me!</Link>
+            </Button>}
+            <IconButton _hover={{ bg: "rgba(67, 27, 92, 0.4)" }} borderColor='#431b5c' bg={'transparent'} variant='outline' size={'lg'}
               icon={isOpen ? <CloseIcon /> : <HamburgerIcon />} aria-label={'Open Menu'} display={{ md: 'none' }} onClick={isOpen ? onClose : onOpen} />
           </Flex>
         </Flex>
@@ -54,11 +91,7 @@ export default function NavBar() {
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }} backgroundColor='black' rounded='30px' pt='15px'>
             <Stack as={'nav'} spacing={4} alignItems='center'>
-              <Link href='#home' className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')} _hover={{ textDecoration: 'none', opacity: 1, }}>Home</Link>
-              <Link href='#skills' className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')} _hover={{ textDecoration: 'none', opacity: 1, }}>Skills</Link>
-              <Link href='#experience-m' className={activeLink === 'experience' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('experience')} _hover={{ textDecoration: 'none', opacity: 1, }}>Experience</Link>
-              <Link href='#projects' className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')} _hover={{ textDecoration: 'none', opacity: 1, }}>Projects</Link>
-              <Link href='#contact' className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contact')} _hover={{ textDecoration: 'none', opacity: 1, }}>Contact</Link>
+              {window.location.href.includes('carmack') ? <></> : mobileNavbarPaths.map((path) => { return (<Link href={path.link} className={activeLink === path.label ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink(path.label)} _hover={{ textDecoration: 'none', opacity: 1, }}>{path.label}</Link>) })}
               <Flex className="social-icon" >
                 <a href="https://www.linkedin.com/in/francis-brokering"><img src={navLinkedIn} alt="linkedin" /></a>
                 <a href="https://www.instagram.com/fkb_0710/"><img src={navInsta} alt="insta" /></a>
