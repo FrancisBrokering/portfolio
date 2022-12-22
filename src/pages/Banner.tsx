@@ -9,7 +9,7 @@ export default function Banner() {
                     <GridItem colSpan={4} >
                         <Box textAlign={{base: 'center', md:'left'}} className={"animate__animated animate__fadeIn"}>
                             <span className="tagline">Welcome to my Portfolio</span>
-                            <h1>{`Hi! my name is  Francis Brokering`}</h1>
+                            <h1>{`Hi! My name is  Francis Brokering`}</h1>
                             <p>Nice to meet you! I was born and raised in Tokyo Japan and came to the United States when I was in my second year of high school. 
                                 I am currently a student at the University of California Santa Cruz majoring in Computer Engineering with goals to one day become a software engineer.
                             </p>

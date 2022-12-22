@@ -35,33 +35,33 @@ export default function Carmack() {
             </Center>
             <Box mt={{md: '100px'}} ml={{ base: '25px', md: '10%' }} mr={{ base: '25px', md: '10%' }} >
                 <h1>How it works</h1>
-                <Grid templateRows={{base: 'repeat(4, 1fr)', md: 'repeat(2, 1fr)'}} templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)'}} gap={{md: '20px'}} >
+                <Grid templateRows={{md: 'repeat(2, 1fr)'}} templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)'}} gap={{base: '40px', md: '20px'}} >
                     <GridItem colSpan={1} rowSpan={1} >
                         <Text as='b' fontSize='18px'>Step 1.</Text>
                         <Text>Start Conversation</Text>
-                        <Text>Begin by saying: "Start Conversation"</Text>
+                        <Text mb={{base: '20px'}} >Begin by saying: "Start Conversation"</Text>
                         <img src={CarmackHome} />
                     </GridItem>
                     <GridItem colSpan={1} rowSpan={1} >
                         <Text as='b' fontSize='18px'>Step 2.</Text>
                         <Text>Select Language</Text>
-                        <Text >Example Voice Command: "Select Python"</Text>
+                        <Text mb={{base: '20px'}} >Example Voice Command: "Select Python"</Text>
                         <img src={CarmackLanguageSelection} />
                     </GridItem>
                     <GridItem colSpan={1} rowSpan={1} >
                         <Text as='b' fontSize='18px'>Step 3.</Text>
                         <Text>Generate Code</Text>
-                        <Text mb='10px'>Example Voice Command: "Create a function that returns the current weather in Santa Cruz"</Text>
+                        <Text mb={{base: '20px'}} >Example Voice Command: "Create a function that returns the current weather in Santa Cruz"</Text>
                         <img src={CarmackGenerateCode} />
                     </GridItem>
                     <GridItem colSpan={1} rowSpan={1} >
                         <Text as='b' fontSize='18px'>Step 4.</Text>
                         <Text>Do Whatever With The Code</Text>
                         <Text >Example Voice Command: "Translate to Javascript"</Text>
-                        <Button size='sm' onClick={onOpen} mb='5px' _hover={{ bg: "rgba(67, 27, 92, 0.4)" }} borderColor='#431b5c' variant='outline'>More Commands</Button>
+                        <Button size='sm' onClick={onOpen} mb={{base: '20px', md: '10px'}} _hover={{ bg: "rgba(67, 27, 92, 0.4)" }} borderColor='#431b5c' variant='outline'>More Commands</Button>
                         <Modal isOpen={isOpen} onClose={onClose} >
                             <ModalOverlay />
-                            <ModalContent mt='200px'>
+                            <ModalContent mt='200px' ml={{base: '20px'}} mr={{base: '20px'}}>
                                 <ModalHeader textColor='black'>Other voice command options</ModalHeader>
                                 <ModalCloseButton />
                                 <ModalBody>
@@ -78,7 +78,6 @@ export default function Carmack() {
                                     <Button colorScheme='blue' variant='ghost' mr={3} onClick={onClose}>
                                         Close
                                     </Button>
-                                    <Button variant='ghost'>Secondary Action</Button>
                                 </ModalFooter>
                             </ModalContent>
                         </Modal>
@@ -88,7 +87,7 @@ export default function Carmack() {
                 </Grid>
                 <Box mt={{base:'50px', md: '100px'}}>
                     <h1>Architecture</h1>
-                    <Grid templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)'}} templateRows={{base: 'repeat(2, 1fr)', md: 'repeat(1, 1fr)'}} gap={'20px'}>
+                    <Grid templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)'}} templateRows={{ md: 'repeat(1, 1fr)'}} gap={'20px'}>
                         <GridItem colSpan={1} rowSpan={1} >
                             <p>The user gives a voice input to an ASR system which gets translated into text. The controller is monitoring the transcript that the ASR provides and base on what it sees, it will push, pop, or make any changes it needs. The model will react to the changes to get fetching-code from the API and update the models state. The user will see an updated render and provide more commands. The frontend was created using React.js and Chakra UI. The API was managed using AWS Lambda.</p>
                         </GridItem>

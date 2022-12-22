@@ -29,7 +29,7 @@ function App() {
                 <Contact />
                 <Footer />
               </>} />
-            <Route path="carmack" element={<Carmack />} />
+            <Route path="/carmack" element={<Carmack />} />
           </Routes>
         </BrowserRouter>
       </div>
